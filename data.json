@@ -23,5 +23,23 @@
       "institute":"ATKINSON HIGH SCHOOL",
       "data":["2014","98%"]
     }
+  ],
+  "skills":[
+    {
+      "title":"Languages",
+      "content":["c","python","java","c++","c#","R"]
+    },
+    {
+      "title":"Database",
+      "content":["SQL","MongoDB","MySql"]
+    },
+    {
+      "title":"Web Technologies",
+      "content":["CSS","HTML","Javascript","PHP"]
+    },
+    {
+      "title":"Frameworks",
+      "content":["django","codeigniter"]
+    }
   ]
 }

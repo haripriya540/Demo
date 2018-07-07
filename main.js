@@ -15,6 +15,7 @@ getfile("data.json", function(text){
   console.log(data);
   career(data.career);
   education(data.education);
+  skills(data.skills);
 })
 
  var child2=document.querySelector(".childtwo");
@@ -31,6 +32,8 @@ getfile("data.json", function(text){
   ch.textContent=careerInfo.info;
   child2.appendChild(ch);
 }
+
+
  function education(edu){
   var eduHeading=document.createElement("h3");
   eduHeading.textContent="EDUCATIONAL QUALIFICATION";
@@ -40,9 +43,27 @@ getfile("data.json", function(text){
   child2.appendChild(careerHr);
 
   var eduTable=document.createElement("table");
-  var tr1="<tr><td>Degreee</td>institute</td><td>Data</td></td>"
+  eduTable.border="1";
+  var tr1="<tr><td>Degree</td><td>institute</td><td>Data</td></tr>";
   eduTable.innerHTML=tr1;
+var tr2="";
+for(var i=0;i<edu.length;i++)
+{
+  tr2+="<tr><td>"+edu[i].degree+"</td><td>"+edu[i].institute+"</td><td>"+edu[i].data+"</td></tr>";
+}
 
-  child2.appendChild(edutable);
+eduTable.innerHTML=tr1+tr2;
+  child2.appendChild(eduTable);
+
+}
+
+function skills(skill){
+  var ul=document.createElement("ul");
+  child2.appendChild(ul);
+  for(var i=0; i<skill.length; i++){
+    var li=document.createElement("li");
+    li.textContent=skill[i].title+":"+skill[i].content;
+    ul.appendChild(li);
+  }
 
 }
