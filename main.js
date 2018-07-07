@@ -7,10 +7,42 @@ function getfile(file,callback){
       callback(xhr.responseText);
     }
   };
-  xhr.send();
+  xhr.send(null);
 }
 
 getfile("data.json", function(text){
   var data=JSON.parse(text);
   console.log(data);
+  career(data.career);
+  education(data.education);
 })
+
+ var child2=document.querySelector(".childtwo");
+
+ function career(careerInfo){
+   // console.log(careerInfo);
+   var careerHeading=document.createElement("h3");
+   child2.appendChild(careerHeading);
+   careerHeading.textContent="Career Objective";
+
+   var careerHr=document.createElement("Hr");
+   child2.appendChild(careerHr);
+  var ch=document.createElement("p");
+  ch.textContent=careerInfo.info;
+  child2.appendChild(ch);
+}
+ function education(edu){
+  var eduHeading=document.createElement("h3");
+  eduHeading.textContent="EDUCATIONAL QUALIFICATION";
+  child2.appendChild(eduHeading);
+
+  var careerHr=document.createElement("hr");
+  child2.appendChild(careerHr);
+
+  var eduTable=document.createElement("table");
+  var tr1="<tr><td>Degreee</td>institute</td><td>Data</td></td>"
+  eduTable.innerHTML=tr1;
+
+  child2.appendChild(edutable);
+
+}

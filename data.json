@@ -3,5 +3,25 @@
     "NAME":"HAPPI",
     "LABEL":"FULL-STACK DEVELOPER",
     "EMAIL":"priyakokku@gmail.com"
-  }
+  },
+  "career":{
+    "info":"to pursure a challenging career and be a part of progressive  organization that gives a scope to enhance my knowledge and utilizing my skills towards the growth of the organization."
+  },
+  "education":[
+    {
+      "degree":"B-Tech(CSE)",
+      "institute":"PVPSIT",
+      "data":["2014-2019","96%"]
+    },
+    {
+      "degree":"INTERMEDIATE",
+      "institute":"SRICHAITNAYA",
+      "data":["2014-2016","92%"]
+    },
+    {
+      "degree":"CBSE",
+      "institute":"ATKINSON HIGH SCHOOL",
+      "data":["2014","98%"]
+    }
+  ]
 }
